@@ -4,7 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack-dev-server -d",
+    "codegen": "graphql-codegen",
+    "prestart": "npm run codegen",
+    "build": "webpack -p"
   },
   "keywords": [],
   "author": "David Stenstrøm <david@stenstroem.dk> (https://davidstenstroem.github.io)",
@@ -77,6 +81,7 @@
     "@fortawesome/pro-solid-svg-icons": "^5.10.1",
     "@fortawesome/react-fontawesome": "^0.1.4",
     "@reach/router": "^1.2.1",
+    "@stenstroem/shared": "git+https://github.com/DavidStenstroem/stenstroem-shared.git",
     "apollo-cache-inmemory": "^1.6.2",
     "apollo-client": "^2.6.3",
     "apollo-link-context": "^1.0.18",
